@@ -8,16 +8,7 @@
 
 ## **Descripción**
 
-Bienvenid@s al repositorio principal del Data Science Bootcamp de **The Bridge, Labora y Fundación Universia** en Valencia.
 
-El repositorio se divide en los siguientes módulos principales:
-
-1. Fundamentos
-2. Herramientas Avanzadas
-3. Data Analysis
-4. Machine Learning
-5. Deep Learning
-6. Deployment
 
 **¡Comenzamos!**  
 
