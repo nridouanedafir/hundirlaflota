@@ -1,32 +1,63 @@
-# **Data Science Valencia Septiembre 2026 - Diciembre 2026**
+# Hundir la flota
 
-![LogoTB](logo.png)
+Una versión de terminal del juego Hundir la flota, desarrollada en Python. Juegas contra una máquina que dispara a casillas aleatorias de tu tablero.
 
-- [**Descripción**](#descripción)
-- [**Comentarios y Aclaraciones**](#comentarios-y-aclaraciones)
-- [**Clonar y Actualizar Repositorio con Git Bash**](#clonar-y-actualizar-repositorio-con-git-bash)
+## Requisitos
 
-## **Descripción**
+- Python 3.10 o posterior.
+- NumPy, instalado con `requirements.txt`.
 
+## Instalación
 
+Abre una terminal en la carpeta del proyecto y ejecuta:
 
-**¡Comenzamos!**  
+```bash
+python -m venv .venv
+```
 
-## **Comentarios y Aclaraciones**
+Activa el entorno virtual:
 
-El repositorio se irá actualizando a medida que avancemos en el Bootcamp, incorporando los materiales de los diferentes módulos, agrupados en sprints y unidades.  
+**Windows (PowerShell):**
 
-Siguiendo esta filosofía, los sprints se abrirán de forma sincronizada con el Campus Virtual, según las fechas de apertura indicadas en el calendario del Bootcamp.
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
 
-## **Clonar y Actualizar Repositorio con Git Bash**
+**macOS o Linux:**
 
-1. Moverse a la carpeta local en la que deseamos clonar el repo. Por ejemplo:
-`
-cd Documents/GitHub
-`
-2. Abrir Git Bash en ese directorio.
-3. Clonar el repositorio con
-`
-git clone https://github.com/ds-online-tb/DS-Online.git
-`
-4. Ejecutar `git pull` para actualizar.
+```bash
+source .venv/bin/activate
+```
+
+Instala las dependencias:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+## Cómo jugar
+
+Inicia el juego desde la carpeta que contiene `main.py`:
+
+```bash
+python main.py
+```
+
+Introduce tu nombre y luego dispara escribiendo una fila y una columna separadas por una coma, por ejemplo:
+
+```text
+5,0
+```
+
+También se acepta el formato `(5,0)`. Las filas y columnas empiezan en `0`, así que en un tablero de 10 × 10 los índices válidos van de `0` a `9`. Si la entrada no es válida o la casilla ya recibió un disparo, el juego explicará el error y permitirá intentarlo de nuevo.
+
+La flota de cada jugador tiene seis barcos: tres de eslora 2, dos de eslora 3 y uno de eslora 4. Los barcos se colocan aleatoriamente al inicio. Gana quien hunda todos los barcos del oponente.
+
+En los tableros, `O` representa un barco, `X` un impacto y `-` un disparo al agua. La máquina elige sus disparos al azar y no repite casillas.
+
+## Estructura del proyecto
+
+- `main.py`: inicia la partida, gestiona los turnos y muestra la interacción por terminal.
+- `clases.py`: define los modelos `Barco`, `Jugador` y `Partida`.
+- `funciones.py`: implementa la creación de tableros, colocación de barcos, disparos y visualización.
+- `requirements.txt`: lista las dependencias externas del proyecto.
